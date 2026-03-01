@@ -5,4 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/gdc/',
   plugins: [react()],
+  server: {
+    hmr: {
+      host: 'g-dc.be',
+      clientPort: 446,
+      protocol: 'wss'
+    }
+  }
 })
